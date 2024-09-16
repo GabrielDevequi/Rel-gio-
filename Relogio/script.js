@@ -2,6 +2,7 @@ const horas = document.getElementById ('horas');
 const minutos = document.getElementById ('minutos');
 const segundos = document.getElementById ('segundos');
 
+
 const relogio = setInterval(function time(){
     let dateToday = new Date();
     let hr = dateToday.getHours();
@@ -16,5 +17,21 @@ const relogio = setInterval(function time(){
     horas.textContent = hr
     minutos.textContent = min
     segundos.textContent = sec
-
 })
+function mute(){
+    var audio = document.getElementById("tik");
+    var button = document.getElementById("muteButton");
+    if (audio.paused) {
+        audio.play();
+        button.textContent ='🔊'
+    } else {
+        audio.pause();
+        button.textContent ='🔇'
+    }
+}
+
+
+
+
+
+
